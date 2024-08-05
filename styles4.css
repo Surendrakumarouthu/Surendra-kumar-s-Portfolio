@@ -68,6 +68,7 @@ header nav ul li a:hover {
     margin-right: 20px;
     float: left;
     padding-right: 15px;
+    transition: transform 0.3s ease-in-out;
 }
 
 .profile .About {
@@ -276,6 +277,7 @@ footer p {
     padding: 5px 15px;
     font-size: medium;
     cursor: pointer; /* Added cursor for better UX */
+    padding: 10px;
 }
 
 .next-button:hover {
@@ -372,8 +374,10 @@ footer p {
     margin-top: 20px;
 }
 
-.button6:hover {
+.button6:hover{
     background-color: #333333;
+    /* display:;
+    filter: drop-shadow(0 0 10px #fffdef); */
 }
 
 .dropdown-content {
@@ -466,13 +470,20 @@ header nav ul li.about a:hover {
     min-width: 100%;
     box-sizing: border-box;
     position: relative;
+
 }
 
 .edu-slide img {
     width: 100%;
     height: auto;
+    transition: transform 0.3s ease-in-out;
+    
 }
-
+.edu-slide img:hover {
+    transform: scale(1.1);
+   
+    
+}
 .edu-slide-content {
     position: absolute;
     bottom: 10%;
@@ -512,6 +523,7 @@ header nav ul li.about a:hover {
 .edu-next {
     right: 10px;
 }
+
 
 #Education {
     background-color: aliceblue;
@@ -601,4 +613,29 @@ header nav ul li.about a:hover {
         transform: scale(0);
         opacity: 0;
     }
+}
+/* Add hover effect to images in certificate slides */
+.slider .slide img {
+    width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out; /* Smooth transition */
+    padding: 15px;
+    border-right:0vh;
+}
+
+.slider .slide img:hover {
+    transform: scale(1.1); /* Scale image to 110% on hover */
+}
+.onlinepet a:hover{
+    background-color: aquamarine;
+    transition: transform 0.3s ease-in-out;
+}
+.nature a:hover{
+    background-color: aquamarine;
+    transition: transform 0.3s ease-in-out;
+    
+}
+.pythonbased a:hover{
+    background-color: aquamarine;
+    transition: transform 0.3s ease-in-out;
 }
