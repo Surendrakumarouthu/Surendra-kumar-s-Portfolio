@@ -84,7 +84,7 @@ header nav ul li a:hover {
 
 .portfolio-item {
     width: 30%;
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -638,4 +638,28 @@ header nav ul li.about a:hover {
 .pythonbased a:hover{
     background-color: aquamarine;
     transition: transform 0.3s ease-in-out;
+}
+.projectlink{
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 5px;
+    text-decoration: none;
+    border-radius: 60px;
+}
+.portfolio-item{
+    padding: 25px;
+}
+.projectlink:hover {
+    background-color:#ffcc00;
+}
+
+.projectlink i {
+    margin-left: 10px; /* Add space between text and icon */
+    font-size: 20px; /* Ensure icon size fits well */
 }
