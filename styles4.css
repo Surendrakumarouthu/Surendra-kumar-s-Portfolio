@@ -14,7 +14,26 @@ body {
     padding: 20px;
     display: block;
 }
-
+.contentmyname{
+ margin: 20px;
+ display: inline-block;
+}
+.myname{
+    overflow: hidden;
+    font-size: 3.6rem;
+    font-weight: 700;
+    border-right: 0.15em solid orange;
+    white-space: nowrap;
+    animation: mynamanimation 4s(40,end) infinite;
+}
+@keyframes mynamanimation{
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
 /* Header styles */
 header {
     color: black;
@@ -69,6 +88,17 @@ header nav ul li a:hover {
     float: left;
     padding-right: 15px;
     transition: transform 0.3s ease-in-out;
+
+}
+.profile img:hover {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+    padding-right: 15px;
+    transition: transform 0.3s ease-in-out;
+    filter: drop-shadow(0px 0px 12px tomato);
 }
 
 .profile .About {
@@ -80,17 +110,28 @@ header nav ul li a:hover {
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
+    padding: 15px;
 }
 
 .portfolio-item {
     width: 30%;
     margin-bottom: 50px;
     text-align: center;
+    color:black;
 }
 
 .portfolio-item img {
     width: 100%;
     border-radius: 8px;
+    backdrop-filter: blur(10px);
+}
+.portfolio-item:hover {
+    background-color: black;
+     color: #007bff; 
+     filter: drop-shadow(0px 0px 12px blue); /* Make sure the shadow is noticeable */
+    position: relative; /* Ensure the element is positioned */
+    z-index: 10; /* Bring the element forward if needed *//* Optional: Change the text color to white for better visibility */
+    
 }
 
 /* Contact section styles */
@@ -127,9 +168,25 @@ header nav ul li a:hover {
     border-radius: 8px;
     height: 200px;
 }
+.slide img:hover {
+    width: 90%;
+    border-radius: 8px;
+    height: 200px;
+    filter: drop-shadow(0px 0px 12px gold); /* Make sure the shadow is noticeable */
+    position: relative; /* Ensure the element is positioned */
+    z-index: 10; /* Bring the element forward if needed *//* Optional: Change the text color to white for better visibility */
+}
 
 .slide h3, .slide p {
     margin: 10px 0;
+    cursor: pointer;
+}
+.slide p:hover {
+    margin: 10px 0;
+    filter: drop-shadow(0px 0px 12px rich olive green); /* Make sure the shadow is noticeable */
+    position: relative; /* Ensure the element is positioned */
+    z-index: 10; 
+    cursor: pointer;
 }
 
 /* Footer styles */
@@ -138,6 +195,7 @@ footer {
     color: #fff;
     text-align: center;
     padding: 10px 0;
+    
 }
 
 footer p {
@@ -263,8 +321,28 @@ footer p {
 
 .internship-item {
     width: 30%;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     text-align: center;
+    padding: 15px;
+    background-color: black;
+     color: white; 
+     border-radius: 100%;
+     padding: 30px;
+    
+}
+.description{
+    padding: 20px;
+}
+.internship-item:p{
+    color:white;
+    padding: 50px;
+}
+.internship-item:hover {
+    background-color: white;
+    color: black;
+    filter: drop-shadow(0px 0px 12px blue); /* Make sure the shadow is noticeable */
+    position: relative; /* Ensure the element is positioned */
+    z-index: 10; /* Bring the element forward if needed */
 }
 
 .next-button {
@@ -282,7 +360,10 @@ footer p {
 
 .next-button:hover {
     color: white;
-    background-color: purple;
+    background-color: purple; 
+    filter: drop-shadow(0px 0px 12px green); /* Make sure the shadow is noticeable */
+    position: relative; /* Ensure the element is positioned */
+    z-index: 10; 
     
 }
 
@@ -378,6 +459,9 @@ footer p {
     background-color: #333333;
     /* display:;
     filter: drop-shadow(0 0 10px #fffdef); */
+    filter: drop-shadow(0px 0px 12px blue); /* Make sure the shadow is noticeable */
+    position: relative; /* Ensure the element is positioned */
+    z-index: 10; 
 }
 
 .dropdown-content {
@@ -460,6 +544,39 @@ header nav ul li.about a:hover {
     margin: auto;
     overflow: hidden;
 }
+.edu-slider-container:hover{
+    box-shadow: 0px 0px 18px gold ;
+    cursor: pointer;
+    border-radius: 40px;
+    
+
+}
+#Education:hover{
+    animation-name: edusliderkeyframes;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+#about:hover{
+    animation-name: profilekeyframes;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    cursor: pointer;
+
+}
+@keyframes edusliderkeyframes {
+    from{background-color:cornsilk};
+    to{background-color:#6B5B95};
+    
+
+    
+}
+@keyframes profilekeyframes {
+    from{background-color:lightskyblue};
+    to{background-color:lightgray};
+    
+
+    
+}
 
 .edu-slider {
     display: flex;
@@ -472,15 +589,20 @@ header nav ul li.about a:hover {
     position: relative;
 
 }
+edu-slide:hover{
+   
+}
 
 .edu-slide img {
     width: 100%;
     height: auto;
     transition: transform 0.3s ease-in-out;
+   
     
 }
 .edu-slide img:hover {
     transform: scale(1.1);
+    
    
     
 }
@@ -663,3 +785,15 @@ header nav ul li.about a:hover {
     margin-left: 10px; /* Add space between text and icon */
     font-size: 20px; /* Ensure icon size fits well */
 }
+
+hr {
+    border: none; /* Remove default border */
+    height: 2px; /* Set the height of the line */
+    background: #fcf9f9; /* Set the color of the line */
+    width: 100%; /* Set the width of the line */
+    margin: 20px 0;
+    /* Add some space above and below the line */
+    
+}
+
+
